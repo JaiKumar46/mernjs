@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let promises=new Promise((resolve,reject)=>{
+        //     let cleanedornot=true;
+        //     if(cleanedornot){
+        //         resolve("cleaned")
+        //     }
+        //     else{
+        //         reject("not cleaned")
+        //     }
+        // });
+        // console.log(promises);
+        
+
+        // promises.then(()=>
+        // {
+        //     console.log("cleaned");
+        //     document.write("cleaned \n")
+        // })
+        // promises.catch(()=>{
+        //      console.log("not cleaned")
+        //      document.write("not cleaned \n")
+        // })
+        // promises.finally(()=>{
+        //     console.log("worked");
+        //     document.write("\n worked")
+        // })
+
+        // another way
+        // function checkMail() {
+        //     return new Promise((res,rej)=>{
+        //         if(Math.random()<0.5)
+        //         {
+        //             res("arrived")
+        //         }
+        //         else{
+        //             rej("not arrived")
+        //         }
+        //     })
+        // }
+
+        // checkMail().then(mail=>{
+        //     console.log(mail);
+        // })
+        // .catch(mail=>{console.log(mail);})
+        //         .finally(_ =>{console.log("sent");})
+
+
+        // let prom= new Promise((res, rej) => {
+        //     setTimeout(()=>{
+        //         res("first")
+        //     },1000)
+        //     setTimeout(() => {
+        //         rej("late")
+        //     }, 10000);
+        //  })
+        //  prom.then(data=>{console.log(data);}).catch(data=>{console.log(data);})
+
+
+        // let prom= new Promise((res, rej) => {
+        //     setTimeout(()=>{
+        //         res("first")
+        //     },1000)
+           
+        //  });
+        //  let prom1= new Promise((res, rej) => {
+        //     setTimeout(()=>{
+        //         res("second")
+        //     },1000)
+            
+        //  })
+        //  let prom2= new Promise((res, rej) => {
+        //     setTimeout(()=>{
+        //         res("third")
+        //     },1000)
+        //     setTimeout(() => {
+        //         rej("out")
+        //     }, 10000);
+        //  })
+        //  Promise.all([prom,prom1,prom2]).then(data=>{console.log(data);}).catch(data=>{
+        //     console.log(data);
+        //  })
+         
+        
+        // let prom= new Promise ((res,rej)=>
+        // {
+        //  let allteamtask=true;
+        //  if(allteamtask){
+        //      res("all task of promise is done from all the teams,go for lunch ")
+        //  }   
+        //  else{
+        //      rej("not a one person in the team done the task,no lunch")
+        //  }
+        // }
+        // );
+        // let prom1=new Promise((res,rej)=>
+        // {
+        //     let lunch=true
+        //     if(lunch){
+        //         res("all task of promise is done from all the teams,go for lunch ")
+        //     }
+        //     else{
+        //         rej("not a one person in the team done the task,no lunch")
+        //     }
+        // });
+        // let prom2=new Promise((res,rej)=>
+        // {
+        //     let lunch=true
+        //     if(lunch){
+        //         res("all task of promise is done from all the teams,go for lunch ")
+        //     }
+        //     else{
+        //         rej("not a one person in the team done the task,no lunch")
+        //     }
+        // });
+        // Promise.any([prom,prom1,prom2]).then(data=>{
+        //     console.log(data);
+        // }).catch(data=>{
+        //     console.log(data);
+        // })
+
+        let prom= new Promise((res, rej) => { 
+            setTimeout(() => {
+                res("jk")
+            }, 0);
+         })
+        let prom1= new Promise((res, rej) => {  setTimeout(() => {
+                res("dada")
+            }, 50); })
+        let prom2= new Promise((res, rej) => {  setTimeout(() => {
+                res("hemanth")
+            }, 10); })
+        let prom3= new Promise((res, rej) => {  setTimeout(() => {
+                res("vijay")
+            }, 5); })
+
+            Promise.allSettled([prom,prom1,prom2,prom3]).then(data=>{
+                console.log(data);
+            }).catch(data=>{
+                console.log(data);
+            })
+   
+
+        
+    </script>
+</body>
+</html>
+     
